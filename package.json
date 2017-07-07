@@ -4,8 +4,10 @@
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
-    "clean-dist": "npm run remove-dist && mkdir dist",
-    "remove-dist": "rimraf ./dist",
+    "clean-build": "npm run remove-build && mkdir build",
+    "remove-build": "rimraf ./build",
+    "babel": "mkdir build/scripts && babel app/scripts --out-file build/scripts/app.js",
+    "babel:watch": "npm run babel -- -w",
     "pug": "pug app/views --out build/views",
     "pug:watch": "npm run pug -- -w"
   },
@@ -25,6 +27,7 @@
   "homepage": "https://github.com/waitandseeagency/wasa-boilerplate#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "cz-conventional-changelog": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6"
   },
@@ -32,5 +35,19 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "babel": {
+    "presets": [
+      ["env", {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "not ie <= 10",
+            "not ie_mob <= 10"
+          ]
+        }
+      }]
+    ]
   }
+
 }
