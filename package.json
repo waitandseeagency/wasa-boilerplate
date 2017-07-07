@@ -12,9 +12,7 @@
     "pug:watch": "npm run pug -- -w",
     "node-sass": "node-sass app/styles/main.scss build/styles/app.css",
     "node-sass:watch": "npm run node-sass -- -w",
-    "postcss": "postcss --config postcss.json",
-    "postcss:watch": "npm run postcss -- -w",
-    "start": "npm-run-all clean-build babel:watch pug:watch node-sass:watch postcss:watch"
+    "start": "npm-run-all --parallel clean-build babel:watch pug:watch node-sass:watch"
   },
   "repository": {
     "type": "git",
@@ -31,14 +29,11 @@
   },
   "homepage": "https://github.com/waitandseeagency/wasa-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "cz-conventional-changelog": "^2.0.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
-    "postcss-cli": "^4.1.0",
-    "postcss-cssnext": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6"
   },
   "config": {
