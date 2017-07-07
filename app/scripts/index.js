@@ -1,3 +1,3 @@
 import App from './components/App';
 
-console.log('hello');
+console.log('This is my awesome log');

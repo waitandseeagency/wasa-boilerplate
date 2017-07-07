@@ -4,14 +4,17 @@
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
-    "clean-build":   "npm run remove-build && mkdir build",
-    "remove-build":  "rimraf ./build",
-    "babel":         "mkdir build/scripts && babel app/scripts --out-file build/scripts/app.js",
-    "babel:watch":   "npm run babel -- -w",
-    "pug":           "pug app/views --out build/views",
-    "pug:watch":     "npm run pug -- -w",
-    "postcss":       "postcss --config config/postcss.json",
-    "postcss:watch": "npm run postcss -- -w"
+    "clean-build": "npm run remove-build && mkdir build && mkdir build/scripts",
+    "remove-build": "rimraf ./build",
+    "babel": "babel app/scripts --out-file build/scripts/app.js",
+    "babel:watch": "npm run babel -- -w",
+    "pug": "pug app/views --out build/views",
+    "pug:watch": "npm run pug -- -w",
+    "node-sass": "node-sass app/styles/main.scss build/styles/app.css",
+    "node-sass:watch": "npm run node-sass -- -w",
+    "postcss": "postcss --config postcss.json",
+    "postcss:watch": "npm run postcss -- -w",
+    "start": "npm-run-all clean-build babel:watch pug:watch node-sass:watch postcss:watch"
   },
   "repository": {
     "type": "git",
@@ -32,11 +35,10 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "cz-conventional-changelog": "^2.0.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",
-    "postcss-extend": "^1.0.5",
-    "postcss-import": "^10.0.0",
-    "postcss-nested": "^2.0.2",
-    "postcss-simple-vars": "^4.0.0",
+    "postcss-cssnext": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6"
   },
   "config": {

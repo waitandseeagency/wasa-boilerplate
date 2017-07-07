@@ -1,0 +1,12 @@
+{
+  "use": [
+    "postcss-cssnext"
+  ],
+  "input": "build/styles/main.css",
+  "output": "build/styles/main.css",
+  "local-plugins": true,
+  "watch": true,
+  "autoprefixer": {
+    "browsers": "> 5%"
+  }
+}
