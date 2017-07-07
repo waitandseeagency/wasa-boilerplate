@@ -1,0 +1,31 @@
+{
+  "name": "wasa-boilerplate",
+  "version": "0.1.0",
+  "description": "ready-to-go wasa-boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waitandseeagency/wasa-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "wasa"
+  ],
+  "author": "Wait And See Agency",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waitandseeagency/wasa-boilerplate/issues"
+  },
+  "homepage": "https://github.com/waitandseeagency/wasa-boilerplate#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
