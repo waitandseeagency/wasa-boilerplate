@@ -4,12 +4,14 @@
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
-    "clean-build": "npm run remove-build && mkdir build",
-    "remove-build": "rimraf ./build",
-    "babel": "mkdir build/scripts && babel app/scripts --out-file build/scripts/app.js",
-    "babel:watch": "npm run babel -- -w",
-    "pug": "pug app/views --out build/views",
-    "pug:watch": "npm run pug -- -w"
+    "clean-build":   "npm run remove-build && mkdir build",
+    "remove-build":  "rimraf ./build",
+    "babel":         "mkdir build/scripts && babel app/scripts --out-file build/scripts/app.js",
+    "babel:watch":   "npm run babel -- -w",
+    "pug":           "pug app/views --out build/views",
+    "pug:watch":     "npm run pug -- -w",
+    "postcss":       "postcss --config config/postcss.json",
+    "postcss:watch": "npm run postcss -- -w"
   },
   "repository": {
     "type": "git",
@@ -26,9 +28,15 @@
   },
   "homepage": "https://github.com/waitandseeagency/wasa-boilerplate#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "cz-conventional-changelog": "^2.0.0",
+    "postcss-cli": "^4.1.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^10.0.0",
+    "postcss-nested": "^2.0.2",
+    "postcss-simple-vars": "^4.0.0",
     "pug-cli": "^1.0.0-alpha6"
   },
   "config": {
@@ -38,16 +46,18 @@
   },
   "babel": {
     "presets": [
-      ["env", {
-        "targets": {
-          "browsers": [
-            "last 2 versions",
-            "not ie <= 10",
-            "not ie_mob <= 10"
-          ]
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "not ie <= 10",
+              "not ie_mob <= 10"
+            ]
+          }
         }
-      }]
+      ]
     ]
   }
-
 }

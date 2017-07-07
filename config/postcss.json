@@ -1,0 +1,17 @@
+{
+  "use": [
+    "autoprefixer",
+    "postcss-import",
+    "postcss-simple-vars",
+    "postcss-extend",
+    "postcss-nested",
+    "postcss-mixins"
+  ],
+  "input": "app/styles/main.scss",
+  "output": "build/styles/main.css",
+  "local-plugins": true,
+  "watch": true,
+  "autoprefixer": {
+    "browsers": "> 5%"
+  }
+}
