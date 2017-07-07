@@ -4,7 +4,8 @@
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pug": "pug app/views --out build/views",
+    "pug:watch": "npm run pug -- -w"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,9 @@
   },
   "homepage": "https://github.com/waitandseeagency/wasa-boilerplate#readme",
   "devDependencies": {
-    "cz-conventional-changelog": "^2.0.0"
+    "babel-cli": "^6.24.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "config": {
     "commitizen": {
