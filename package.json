@@ -4,6 +4,8 @@
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "rimraf ./dist",
     "pug": "pug app/views --out build/views",
     "pug:watch": "npm run pug -- -w"
   },
