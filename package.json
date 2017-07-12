@@ -8,7 +8,7 @@
     "remove-build": "rimraf ./build",
     "babel": "babel app/scripts --out-file build/scripts/app.js",
     "babel:watch": "npm run babel -- -w",
-    "pug": "pug app/views --out build/views",
+    "pug": "pug app/views/*.pug --out build/views",
     "pug:watch": "npm run pug -- -w",
     "node-sass": "node-sass app/styles/main.scss build/styles/app.css",
     "node-sass:watch": "npm run node-sass -- -w",

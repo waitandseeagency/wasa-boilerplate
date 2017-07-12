@@ -1,12 +1,7 @@
-include includes/head.pug
+extends layout/base
 
-  include includes/header.pug
+append config
+  - var pageTitle = 'Page Title'
 
-  h2 This is my awesome page content.
-  .visuallyhidden
-    // inject:svg
-    // endinject
-  // inject:js
-  script(src='https://cdn.polyfill.io/v2/polyfill.min.js')
-
-include includes/footer.pug
+block content
+  .Home This is my home
