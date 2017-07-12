@@ -12,6 +12,8 @@
     "pug:watch": "npm run pug -- -w",
     "node-sass": "node-sass app/styles/main.scss build/styles/app.css",
     "node-sass:watch": "npm run node-sass -- -w",
+    "postcss": "postcss build/styles/app.css --use postcss-cssnext -r",
+    "postcss:watch": "",
     "start": "npm-run-all --parallel clean-build babel:watch pug:watch node-sass:watch"
   },
   "repository": {
@@ -34,6 +36,8 @@
     "cz-conventional-changelog": "^2.0.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6"
   },
   "config": {

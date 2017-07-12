@@ -4,4 +4,7 @@ header {
   h1 {
     color: green;
   }
+  input::placeholder {
+    color: red;
+  }
 }
