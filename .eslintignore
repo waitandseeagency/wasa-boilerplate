@@ -1,0 +1,8 @@
+# Ignore config files
+node_modules/*
+
+# Ignore built files
+build/*
+
+# Ignore config files
+bs-config.js

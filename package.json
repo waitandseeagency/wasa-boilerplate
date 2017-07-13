@@ -6,20 +6,15 @@
   "scripts": {
     "clean-build": "npm run remove-build && mkdir build && mkdir build/scripts",
     "remove-build": "rimraf ./build",
-
     "build": "npm-run-all clean-build babel pug node-sass postcss",
     "start": "npm run clean-build && npm-run-all --parallel clean-build babel:watch pug:watch styles:watch browser-sync",
-
-    "babel": "babel app/scripts --out-file build/scripts/app.js",
+    "babel": "babel app/scripts/*.js --out-file build/scripts/app.js -s",
     "babel:watch": "npm run babel -- -w",
-
     "pug": "pug app/views/*.pug --out build",
     "pug:watch": "npm run pug -- -w",
-
     "node-sass": "node-sass app/styles/main.scss build/styles/app.css",
     "postcss": "postcss build/styles/app.css --use postcss-cssnext -r",
     "styles:watch": "npm-run-all node-sass -- -w && npm run postcss -- -w",
-
     "browser-sync": "browser-sync start --config bs-config.js"
   },
   "repository": {
@@ -39,8 +34,12 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
     "browser-sync": "^2.18.12",
     "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
     "postcss-cli": "^4.1.0",
@@ -51,21 +50,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions",
-              "not ie <= 10",
-              "not ie_mob <= 10"
-            ]
-          }
-        }
-      ]
-    ]
   }
 }
