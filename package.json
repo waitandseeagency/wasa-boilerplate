@@ -6,15 +6,20 @@
   "scripts": {
     "clean-build": "npm run remove-build && mkdir build && mkdir build/scripts",
     "remove-build": "rimraf ./build",
+
+    "build": "npm-run-all clean-build babel pug node-sass postcss",
+    "start": "npm run clean-build && npm-run-all --parallel clean-build babel:watch pug:watch styles:watch browser-sync",
+
     "babel": "babel app/scripts --out-file build/scripts/app.js",
     "babel:watch": "npm run babel -- -w",
-    "pug": "pug app/views/*.pug --out build/views",
+
+    "pug": "pug app/views/*.pug --out build",
     "pug:watch": "npm run pug -- -w",
+
     "node-sass": "node-sass app/styles/main.scss build/styles/app.css",
-    "node-sass:watch": "npm run node-sass -- -w",
     "postcss": "postcss build/styles/app.css --use postcss-cssnext -r",
-    "postcss:watch": "npm run postcss -- -w",
-    "start": "npm-run-all --parallel clean-build babel:watch pug:watch node-sass:watch",
+    "styles:watch": "npm-run-all node-sass -- -w && npm run postcss -- -w",
+
     "browser-sync": "browser-sync start --config bs-config.js"
   },
   "repository": {
