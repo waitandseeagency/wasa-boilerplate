@@ -1,4 +1,10 @@
+// @flow
+
 const App = 'App';
+
+const test: string = 'test'
+
+console.log(test);
 
 console.log(App);
 

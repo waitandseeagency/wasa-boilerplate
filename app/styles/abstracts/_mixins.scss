@@ -1,0 +1,20 @@
+// Show / Hide
+.u-desktopOnly {
+  @media (max-width: $mq-m-max) {
+    display: none !important;
+  }
+}
+
+.u-mobileOnly {
+  @media (min-width: $mq-m) {
+    display: none !important;
+  }
+}
+
+
+// List
+@mixin list-reset {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}

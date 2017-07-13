@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i');
+$raleway:            'Raleway', sans-serif;
+
+// Base
+$font-size-root:     62.5%;       // html tag to make 1em equal 10px
+$font-size-base:     1.6rem;      // body tag
+$font-size-base-m:   1.2rem;      // body tag mobile
+$font-family-base:   $raleway;    // add your custom font-face here
+$border-radius-base: .3rem;
+$line-height-base:   1.4;
+
+// Colors
+$white: #fff;
+$black: #000;
+
+// Media queries
+$mq-s:               414px;
+$mq-t-max:           767px;
+$mq-t:               768px;
+$mq-m-max:           1023px;
+$mq-m:               1024px;
+$mq-ml:              1280px;
+$mq-l:               1400px;

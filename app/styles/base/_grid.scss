@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: $white;
+  color: $black;
+  font-size: $font-size-base-m;
+  font-family: $font-family-base;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+
+  @media (min-width: $mq-m) {
+    font-size: $font-size-base;
+  }
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
