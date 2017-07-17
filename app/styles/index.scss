@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
 // 2. Base stuff
-@import 'base/reboot';
-@import 'base/grid';
+@import "base/reboot";
+@import "base/grid";
 
 // 3. Layout-related sections
 // @import "layout/Header";
