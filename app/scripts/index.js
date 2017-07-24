@@ -1,4 +1,4 @@
 // @flow
 
-const App: string = 'app'
+const App: string = 'my app'
 console.log(App);

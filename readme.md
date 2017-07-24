@@ -6,11 +6,6 @@ A front-end boilerplate that's easy-to-use and ready-to-go.
     <td>
       <img width="77px" alt="Sass logo" src="http://www.johann-pinson.fr/img/data/wait-and-see-agency.png" />
     </td>
-    <td valign="bottom" align="right">
-      <a href="https://nodei.co/">
-        NodeICO incoming
-      </a>
-    </td>
   </tr>
 </table>
 
