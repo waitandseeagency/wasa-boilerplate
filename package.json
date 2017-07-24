@@ -4,7 +4,7 @@
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
-    "clean-build": "npm run remove-build && mkdir build && md 'build/scripts'",
+    "clean-build": "npm run remove-build && mkdir build && cd build && mkdir scripts",
     "remove-build": "rimraf ./build",
     "start": "npm run clean-build && npm run build && npm-run-all --parallel scripts:watch views:watch styles:watch browser-sync",
     "build": "npm-run-all clean-build build-task:babel build-task:pug build-task:node-sass build-task:postcss",
