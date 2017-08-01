@@ -1,15 +1,15 @@
 {
   "name": "wasa-boilerplate",
-  "version": "0.2.0-beta.0",
+  "version": "1.0.0-beta.1",
   "description": "ready-to-go wasa-boilerplate",
   "main": "index.js",
   "scripts": {
-    "clean-build": "npm run remove-build && mkdir build && mkdir build/scripts",
+    "clean-build": "npm run remove-build && mkdir build && cd build && mkdir scripts",
     "remove-build": "rimraf ./build",
     "start": "npm run clean-build && npm run build && npm-run-all --parallel scripts:watch views:watch styles:watch icons:watch browser-sync",
     "build": "npm-run-all clean-build build-task:babel build-task:pug build-task:node-sass build-task:postcss build-task:icons",
     "build-task:babel": "babel app/scripts/index.js --out-file build/scripts/index.js -s",
-    "build-task:pug": "pug app/views/*.pug --out build",
+    "build-task:pug": "pug app/views/ --out build",
     "build-task:node-sass": "node-sass app/styles/index.scss -o build/styles/",
     "build-task:postcss": "postcss build/styles/index.css --use postcss-cssnext -r",
     "build-task:icons": "svg-sprite-generate -d app/icons -o build/icons/sprite.svg",

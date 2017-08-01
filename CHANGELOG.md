@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0-beta.1"></a>
+# [1.0.0-beta.1](https://github.com/waitandseeagency/wasa-boilerplate/compare/v0.2.0-beta.0...v1.0.0-beta.1) (2017-07-28)
+
+
+### Bug Fixes
+
+* **scripts:** fix MSDOS compatibility with mkdir ([360e80d](https://github.com/waitandseeagency/wasa-boilerplate/commit/360e80d))
+* **scripts:** fix script directory creation ([39d17fc](https://github.com/waitandseeagency/wasa-boilerplate/commit/39d17fc))
+* **views:** update pug-cli to git#master and add flag _ to ignore includes/layout files ([4f090b4](https://github.com/waitandseeagency/wasa-boilerplate/commit/4f090b4))
+
+
+### Features
+
+* **boilerplate:** Create license ([31897f9](https://github.com/waitandseeagency/wasa-boilerplate/commit/31897f9))
+
+
+
+<a name="0.2.0-beta.1"></a>
+# [0.2.0-beta.1](https://github.com/waitandseeagency/wasa-boilerplate/compare/v0.2.0-beta.0...v0.2.0-beta.1) (2017-07-28)
+
+
+### Bug Fixes
+
+* **scripts:** fix MSDOS compatibility with mkdir ([360e80d](https://github.com/waitandseeagency/wasa-boilerplate/commit/360e80d))
+* **scripts:** fix script directory creation ([39d17fc](https://github.com/waitandseeagency/wasa-boilerplate/commit/39d17fc))
+* **views:** update pug-cli to git#master and add flag _ to ignore includes/layout files ([4f090b4](https://github.com/waitandseeagency/wasa-boilerplate/commit/4f090b4))
+
+
+### Features
+
+* **boilerplate:** Create license ([31897f9](https://github.com/waitandseeagency/wasa-boilerplate/commit/31897f9))
+
+
+
 <a name="0.2.0-beta.0"></a>
 # 0.2.0-beta.0 (2017-07-24)
 
