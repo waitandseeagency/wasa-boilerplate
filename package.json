@@ -12,12 +12,12 @@
     "build-task:pug": "pug app/views/ --out build",
     "build-task:node-sass": "node-sass app/styles/index.scss -o build/assets/",
     "build-task:postcss": "postcss build/assets/index.css --use postcss-cssnext -r",
-    "build-task:icons": "svg-sprite-generate -d app/icons -o build/assets/icons/sprite.svg",
+    "build-task:icons": "svg-sprite-generate -d app/assets/icons -o build/assets/icons/sprite.svg",
     "scripts:watch": "chokidar 'app/scripts/index.js' -c 'npm run build-task:babel'",
     "views:watch": "chokidar 'app/views/**/*' -c 'npm run build-task:pug'",
     "styles:build": "npm-run-all build-task:node-sass build-task:postcss",
     "styles:watch": "chokidar 'app/styles/**/*.scss' -c 'npm run styles:build'",
-    "icons:watch": "chokidar 'app/icons' -c 'npm run build-task:icons'",
+    "icons:watch": "chokidar 'app/assets/icons' -c 'npm run build-task:icons'",
     "browser-sync": "browser-sync start --config bs-config.js"
   },
   "repository": {
